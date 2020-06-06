@@ -28,13 +28,12 @@ function validateUser(req, res, next) {
     }
   });
 }
-router.post('/create',validateUser, upload.single("imageProduct"), Product.createData)
-// router.post('/create',validateUser, Event.createData)
+router.post('/create',validateUser,upload.single("imageProduct"), Product.createData)
 
 router.get ('/show',Product.getAllData)
-router.delete('/delete/:eventId',validateUser, Product.deleteById)
-router.get('/show/:eventId', Product.getDataById)
-router.put('/edit/:eventId',validateUser, Product.updateDataById)
+router.delete('/delete/:productId',validateUser, Product.deleteById)
+router.get('/show/:productId', Product.getDataById)
+router.put('/edit/:productId',validateUser, Product.updateDataById)
 router.get('/getByUserId/:userId',Product.getByUserId)
 
 module.exports = router;
