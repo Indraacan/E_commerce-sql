@@ -28,7 +28,7 @@ function validateUser(req, res, next) {
     }
   });
 }
-router.post('/create',validateUser, upload.single("imageEvent"), Product.createData)
+router.post('/create',validateUser, upload.single("imageProduct"), Product.createData)
 // router.post('/create',validateUser, Event.createData)
 
 router.get ('/show',Product.getAllData)
