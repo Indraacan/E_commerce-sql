@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "kawasan1?",
-    "database": "E_commerce",
+    "password": "Vancot123?",
+    "database": "commerce",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": "false"
@@ -17,7 +17,7 @@
   },
   "production": {
     "username": "root",
-    "password": "Kawasan1?",
+    "password": "Vancot123?",
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql",
