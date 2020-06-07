@@ -39,13 +39,33 @@ module.exports = {
         throw err;
     })
     },
+    // getAllData : (req,res)=>{
+    //     Product.findAll({include: "user"})        
+    //     .then((result) => res.json(result))
+    //     .catch((err)=> {
+    //         throw err;
+    //     })
+    // },
     getAllData : (req,res)=>{
-        Product.findAll({include: "user"})        
-        .then((result) => res.json(result))
-        .catch((err)=> {
-            throw err;
-        })
-    },
+            console.log('getalldata  ok',req.query)
+            const search = (req && req.query && req.query.search) || ""
+            Event.findAll({include: "user" , where : {
+                [or]: {
+                    name: {
+                        [like]: `%${search}%`
+                    },
+                    category:{
+                        [like]: `%${search}%`
+                    }
+                }
+                
+            }
+            })        
+            .then((result) => res.json(result))
+            .catch((err)=> {
+                throw err;
+            })
+        },
    
     getDataById: (req, res) => {
         Product.findAll({
