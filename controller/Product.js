@@ -1,6 +1,6 @@
 const Model = require("../models");
-// const Sequelize = require('sequelize')
-// const { like, or } = Sequelize.Op;
+const Sequelize = require('sequelize')
+const { like, or } = Sequelize.Op;
 
 const Product = Model.Product;
 const User = Model.User
