@@ -49,7 +49,7 @@ module.exports = {
     getAllData : (req,res)=>{
             console.log('getalldata  ok',req.query)
             const search = (req && req.query && req.query.search) || ""
-            Event.findAll({include: "user" , where : {
+            Product.findAll({include: "user" , where : {
                 [or]: {
                     name: {
                         [like]: `%${search}%`
